@@ -24,7 +24,7 @@ export default function Header() {
         <header className="flex items-center justify-between border-b border-black/10 h-14 px-9 bg-[#f6f6ef]">
             <Link href="/" className="flex flex-row items-center space-x-1">
                 <Image src="/LAXGradesDistributionLogo.svg" alt="LAX Grades Logo" width={50} height={50} />
-                <h1><strong><span className="text-red-900">LAX</span>GRADES</strong></h1>
+                <h1 className="text-gray-800"><strong><span className="text-red-900">LAX</span>GRADES</strong></h1>
             </Link>
 
 
@@ -34,9 +34,9 @@ export default function Header() {
                         <li
                             key={route.path}
                             className={cn(
-                                "hover:text-gray-900 flex items-center relative transition",
+                                "text-gray-900 flex items-center relative transition",
                                 {
-                                    "text-": activePathname === route.path,
+                                    "text-red-800": activePathname === route.path,
                                     "text-gray-700": activePathname !== route.path,
                                 }
                             )}
