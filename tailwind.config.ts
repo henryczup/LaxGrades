@@ -23,7 +23,12 @@ export default config;
 module.exports = {
   theme: {
     colors: {
-      "maroon": "#840024"
+      "maroon": "#840024",
+      "beige": "#f6f6ef",
+    },
+    backgroundColor: {
+      "maroon": "#840024",
+      "beige": "#f6f6ef",
     },
   },
 };
@@ -40,7 +45,6 @@ module.exports = {
   content: ["./src/**/*.{ts,tsx}"],
   darkMode: "class",
   theme: {
-    // rest of the code
   },
   plugins: [
     // rest of the code
