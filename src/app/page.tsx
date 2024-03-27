@@ -1,5 +1,7 @@
 import Search from "@/components/component/search"
 import { BackgroundGradientAnimation } from "@/components/ui/background-animations"
+import { Skeleton } from "@/components/ui/skeleton"
+import { Suspense } from "react"
 
 export default function Home() {
   return (
@@ -13,7 +15,9 @@ export default function Home() {
             View all the past grades for classes taken at the University of Wisconsin, Lacrosse.
           </p>
           <div className="w-[600px]">
-            <Search placeholder="Search by Class, Department, or Intructor" />
+            <Suspense fallback={<Skeleton className="w-[600px] h-16" />}>
+              <Search placeholder="Search by Class, Department, or Intructor" />
+            </Suspense>
           </div>
         </main>
       </div>
